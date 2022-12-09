@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열에서 중복 요소 제거하기</title>
+</head>
+<body>
+    <script>
+        // Array.from 사용 (객체 -> 배열)
+        function unique(arr) {
+            return Array.from(new Set(arr));
+        }
+
+        let values = ["Hare", "Krishna", "Hare", "Krishna",
+        "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        ];
+
+        alert( unique(values) ); // 얼럿창엔 `Hare, Krishna, :-O`만 출력되어야 합니다.
+    </script>
+</body>
+</html>

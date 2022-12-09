@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'읽음'상태인 메시지 저장하기</title>
+</head>
+<body>
+    <script>
+        //WeakSet 사용
+        let messages = [
+        {text: "Hello", from: "John"},
+        {text: "How goes?", from: "John"},
+        {text: "See you soon", from: "Alice"}
+        ];
+
+        let readMessages = new WeakSet();
+
+        readMessages.add(messages[0]);
+        readMessages.add(messages[1]);
+
+        alert("message 0은 읽음 상태? " + readMessages.has(messages[0]));
+
+        messages.shift(); // shift: 배열에서 첫번째 요소 삭제 후 반환
+    </script>
+</body>
+</html>

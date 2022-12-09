@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열과 관련된 연산</title>
+</head>
+<body>
+    <script>
+        let styles = ["Jazz", "Blues"];
+
+        styles.push("Rock-n-Roll");
+
+        //Math.floor 추가
+        styles[Math.floor((styles.length-1)/2)] = "Classics";
+
+        styles.shift();
+
+        styles.unshift("Rap", "Reggae");
+        alert(styles);
+    </script>
+</body>
+</html>

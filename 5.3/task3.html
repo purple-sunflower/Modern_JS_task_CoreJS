@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 줄이기</title>
+</head>
+<body>
+    <script>
+        function truncate(str, maxlength) {
+            strLength = str.length;
+
+            let result = (strLength > maxlength-1)? str.slice(0, maxlength) + "...": str;
+            
+            return result
+        }
+
+        alert(truncate("What I'd like to tell on this topic is:", 20)); // "What I'd like to te…"
+        alert(truncate("Hi everyone!", 20)); // "Hi everyone!"
+    </script>
+</body>
+</html>

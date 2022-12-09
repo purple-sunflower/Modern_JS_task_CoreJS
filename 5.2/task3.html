@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자를 입력할 때까지 반복하기</title>
+</head>
+<body>
+    <script>
+        // ****
+        function readNumber(){
+            let num;
+
+            do{
+                num = prompt("숫자 입력", 0);
+            } while (!isFinite(num));
+
+            //*(핵심코드)*
+            if(num === null || num ==="") return null;
+            //*
+
+            return +num;
+        }
+
+        alert(`Read: ${readNumber()}`)
+        // ****
+    </script>
+</body>
+</html>

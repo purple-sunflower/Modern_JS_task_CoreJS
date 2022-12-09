@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.35.toFixed(1) == 6.3인 이유는 무엇일까요?</title>
+</head>
+<body>
+    <script>
+        alert( 1.35.toFixed(1) ); // 1.4
+        alert( 6.35.toFixed(1) ); // 6.3
+        // 6.3인 이유? => *정밀도 손실* 발생
+        // 6.35.toFixed(20) => 6.34999999999999964473
+        // 3.5보다 작음 -> 버림됨 -> 6.3
+        // ** 6.4로 수정 방법
+        // (6.35 * 10).toFixed(20) -> 63.50000000000000000000
+        // Math.round( (6.35*10) / 10 ) -> Math.round(6.35) -> 6.4
+    </script>
+</body>
+</html>

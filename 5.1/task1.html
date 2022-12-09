@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열에 프로퍼티를 추가할 수 있을까요?</title>
+</head>
+<body>
+    <script>
+        let str = "Hello";
+
+        str.test = 5;
+
+        alert(str.test);
+
+        // **엄격모드: undefined
+        // 엄격모드에선 래퍼객체 수정 시, error 발생
+        // **비엄격모드: An error
+        // 비엄격모드에선 래퍼객체 수정 시, error 발생 X
+        // 래퍼객체에 프로퍼티 test 추가
+        // but 래퍼 객체는 바로 삭제 
+        // -> 마지막 줄 실행 시, 프로퍼티 test 찾을 수 X
+    </script>
+</body>
+</html>

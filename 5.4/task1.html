@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열은 복사가 될까요?</title>
+</head>
+<body>
+    <script>
+        let fruits = ["사과", "배", "오렌지"];
+
+        // 배열을 '복사'한 후, push 메서드를 이용해 새로운 값을 추가합니다.
+        let shoppingCart = fruits;
+        shoppingCart.push("바나나");
+
+        // fruits에 어떤 값이 들어 있을까요?
+        alert( fruits.length ); // 4
+
+        // 배열 복사 가능 -> 참조 값을 복사하는 것!
+        // 따지고 보면 한 배열을 중복 참조 하는 꼴
+    </script>
+</body>
+</html>

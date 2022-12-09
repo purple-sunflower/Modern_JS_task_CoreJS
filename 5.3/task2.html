@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스팸 문자열 걸러내기</title>
+</head>
+<body>
+    <script>
+        function checkSpam(str) {
+            str = str.toLowerCase();
+            if(str.includes("viagra")||str.includes("xxx")){
+                return true
+            }
+            return false
+        }
+
+        /* function checkSpam(str) {
+            let lowerStr = str.toLowerCase();
+
+            return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+        } */
+
+        alert(checkSpam('buy ViAgRA now')); 
+        alert(checkSpam('free xxxxx')); 
+        alert(checkSpam("innocent rabbit")); 
+    </script>
+</body>
+</html>
