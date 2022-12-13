@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>몇 초나 지났을까요?</title>
+    <title>달의 마지막 일</title>
 </head>
 <body>
     <script>
-        function getSecondsToday() {
-            let now = new Date();
-
-            let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-
-            let diff = now - today;
-            return Math.round (diff/1000); // 밀리세컨드라서 초로 바꾸기 위한 작업 
+        function getLastDayOfMonth(year, month) {
+            let date = new Date (year, month+1 , 0);
+            return date.getDate();
         }
 
-       alert(getSecondsToday())
+        alert( getLastDayOfMonth(2012, 0) ); // 31
+        alert( getLastDayOfMonth(2012, 1) ); // 29
+        alert( getLastDayOfMonth(2013, 1) ); // 28
     </script>
 </body>
 </html>
